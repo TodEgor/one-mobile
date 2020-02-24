@@ -101,6 +101,26 @@ public class FollowingPageTests {
     }
 
     /**
+     * Check keeping favorite team if we try to remove team, but click "Keep" button instead of "Remove".
+     * Let's do next steps:
+     *  * click "Edit" button
+     *  * click "Remove favorite team"
+     *  * click "KEEP" button
+     *  * check favorite team is "Germany"
+     */
+    @Test
+    public void cancelRemovingFavoriteTeamTest() {
+        Following.$editButton.click();
+        Following.$removeFavoriteTeamButton.click();
+
+        BottomRemove.$title.shouldHave(Condition.text("Remove your favourite team?"));
+        BottomRemove.$keepButton.click();
+
+        Following.$doneButton.click();
+        Following.$favoriteTeamText.shouldHave(Condition.text("Germany"));
+    }
+
+    /**
      * In this method after each test we close webDriver.
      */
     @After

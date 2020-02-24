@@ -6,10 +6,12 @@ import org.openqa.selenium.By;
 import static com.codeborne.selenide.Selenide.$;
 
 public class Following {
+    public static SelenideElement $editButton = $(By.id("de.motain.iliga:id/action_edit"));
+    public static SelenideElement $doneButton = $(By.id("de.motain.iliga:id/action_done"));
+
     public static SelenideElement $favoriteClubCard = $(By.id("de.motain.iliga:id/favouriteClubCardContent"));
-    public static SelenideElement $favoriteClubText = $(By.id("de.motain.iliga:id/favouriteClubText"));
-    public static SelenideElement $favoriteTeamCard = $(By.id("de.motain.iliga:id/favouriteTeamCard"));
     public static SelenideElement $favoriteTeamText = $(By.id("de.motain.iliga:id/favouriteNationalTeamTxt"));
+    public static SelenideElement $removeFavoriteTeamButton = $(By.id("de.motain.iliga:id/removeFavouriteNationalTeam"));
 
     public static SelenideElement $followingTeam = $(By.id("de.motain.iliga:id/following_item_name"));
     public static SelenideElement $followingTeamBrowseButton = $(By.xpath("//*[@resource-id='de.motain.iliga:id/followedTeamsSection']//*[@resource-id='de.motain.iliga:id/actionBtn']"));

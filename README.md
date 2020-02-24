@@ -1,6 +1,7 @@
 Autotests for Android application.
 
-Before run test you should run appium with default parameters and Android virtual device. 
+Before run test you should run appium with default parameters and Android virtual device.
+Tests was developing with Nexus 6 and Android 9.  
  - Parameters can be changed in environment.propreties
  - Capabilities can be changed in capabilities.propreties
 
